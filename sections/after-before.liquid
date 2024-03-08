@@ -119,7 +119,7 @@
         width: 50%;
     }
     #shopify-section-{{ section.id }} .content-12 h1{
-        font-size: 45px;
+        font-size:{{ section.settings.head-font }}px;
         font-weight:600;
     }
     #shopify-section-{{ section.id }} .content-12 a{
@@ -220,6 +220,15 @@
         "type":"text",
         "id":"afbf-head",
         "label":"Your Heading"
+      },
+      {
+        "type": "range",
+        "id": "head-font",
+        "label": "Font size",
+        "min": 10,
+        "max": 100,
+        "default": "45",
+        "unit": "px"
       },
        {
         "type":"text",
