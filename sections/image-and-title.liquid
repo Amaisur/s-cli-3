@@ -1,10 +1,36 @@
 
+<style>
+.main-i-t{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+   .main-image-f{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+   } 
+   .main-image-f{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+   }
 
+</style>
+
+
+<div class="main-i-t">
+{% for block in section.blocks %}  
 <div class="main-image-f">
-    <img src="{{ section.settings.img-1 |  img_url: 'master' }}" alt="" width="300px">
-    <h2>{{ section.settings.head-1 }}</h2>
+    <img src="{{ block.settings.img-1 |  img_url: 'master' }}" alt="" width="300px">
+    <h2>{{ block.settings.head-1 }}</h2>
 </div>
-
+{% endfor %}
+</div>
 
 
 
@@ -13,7 +39,14 @@
 {
     "name": "Image and title",
     "settings": [
-        {
+    
+    ],
+    "blocks": [
+      {
+        "name": "image",
+        "type": "block",
+        "settings": [
+            {
             "type": "image_picker",
             "id": "img-1",
             "label": "Your Image"
@@ -24,6 +57,8 @@
             "label": "Heading",
             "default": "Heading"
         }
+        ]
+      }
     ],
     "presets": [
         {
