@@ -1,0 +1,35 @@
+
+
+<div class="main-image-f">
+    <img src="{{ section.settings.img-1 |  image_url: master: }}" alt="" width="300px">
+    <h2>{{ section.settings.head-1 }}</h2>
+</div>
+
+
+
+
+
+{% schema  %} 
+{
+    "name": "Image and title",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "img-1",
+            "label": "Your Image"
+        },
+        {
+            "type": "text",
+            "id": "head-1",
+            "label": "Heading",
+            "default": "Heading"
+        }
+    ],
+    "presets": [
+        {
+            "name": "image and title"
+        }
+    ]
+}
+
+{% endschema %}
