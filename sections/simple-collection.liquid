@@ -17,17 +17,23 @@
 }
 .img-20{
     width: 100%;
+    height: 100%;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 0 10px;
 }
 .img-20 img{
     width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
 }
 .collection-c-20 h2{
     text-align: center;
+    color: black;
+}
+.collection-c-20 a{
+    text-decoration: none;
 }
 </style>
 
@@ -42,7 +48,7 @@
                 <img src="{{ collection.featured_image |  img_url:'master' }}" alt="">
             </div>
             <div class="title-20">
-                <h2> {{ collection.title }} </h2>
+               <a href="{{ collection.url }}"> <h2> {{ collection.title }} </h2> </a>
             </div>
         </div>
     {% endfor %}
