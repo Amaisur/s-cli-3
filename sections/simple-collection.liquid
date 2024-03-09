@@ -1,0 +1,74 @@
+<style>
+.main-c-20{
+    width: 100%;
+    margin: 30px 0;
+    padding: 30px 20px;
+}
+.inner-c-20{
+    width: 90%;
+    margin: 0 auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.collection-c-20{
+    width: 30%;
+}
+.img-20{
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 0 10px;
+}
+.img-20 img{
+    width: 100%;
+    border-radius: 50%;
+}
+</style>
+
+
+<div class="main-c-20">
+    <div class="inner-c-20">
+        {% assign collection = block.settings.s-collection %}
+    {%  for block in section.blocks %}  
+        <div class="collection-c-20">
+            <div class="img-20">
+                <img src="{{ collection.featured_image |  img_url: }}" alt="">
+            </div>
+            <div class="title-20">
+                <h2> {{ collection.title }} </h2>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Simple Collection",
+    "settings": [
+        
+        ],
+        "blocks": [
+            {
+                "type": "collection",
+                "name": "collection",
+                "limit": 3,
+                "settings": [
+                    {
+                        "type": "collection",
+                        "id": "s-collection",
+                        "label": "Choose collection"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "simple collection"
+            }
+        ]
+}
+{% endschema %}
