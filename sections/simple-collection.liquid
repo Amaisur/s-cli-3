@@ -30,8 +30,9 @@
 
 <div class="main-c-20">
     <div class="inner-c-20">
-        {% assign collection = block.settings.s-collection %}
-    {%  for block in section.blocks %}  
+        
+    {%  for block in section.blocks %}
+        {% assign collection = block.settings.s-collection %}  
         <div class="collection-c-20">
             <div class="img-20">
                 <img src="{{ collection.featured_image |  img_url:'master' }}" alt="">
