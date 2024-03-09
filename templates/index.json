@@ -498,6 +498,36 @@
       ],
       "settings": {
       }
+    },
+    "simple_collection_4rDmeA": {
+      "type": "simple-collection",
+      "blocks": {
+        "collection_YaGGpn": {
+          "type": "collection",
+          "settings": {
+            "s-collection": "face-masks"
+          }
+        },
+        "collection_RaVQEh": {
+          "type": "collection",
+          "settings": {
+            "s-collection": "little-lights"
+          }
+        },
+        "collection_h8d3kW": {
+          "type": "collection",
+          "settings": {
+            "s-collection": "stickers"
+          }
+        }
+      },
+      "block_order": [
+        "collection_YaGGpn",
+        "collection_RaVQEh",
+        "collection_h8d3kW"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -515,6 +545,7 @@
     "faq_icons_jPUGyN",
     "custom_liquid_Bhf3Ab",
     "custom_liquid_zC4zn9",
-    "image_and_title_NiJ7UB"
+    "image_and_title_NiJ7UB",
+    "simple_collection_4rDmeA"
   ]
 }
