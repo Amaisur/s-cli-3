@@ -113,7 +113,7 @@
             margin: 10px auto;
             transition: all .5s;
         }
-        ..main-20-product:hover  .product-20-btn{
+        .main-20-product:hover  .product-20-btn{
             opacity: 1 !important;
         }
         .main-collection-20 .section-btn-20:hover{
@@ -141,6 +141,7 @@
                 <div class="collection-20-col-scroll c-20-col">
                     {% for product in collection.products %}
                         <div class="main-20-product">
+                            <a href="{{ product.url }}">
                             <div class="img-20-product">
                                 <img src="{{ product.featured_image |  img_url: 'master' }}" alt="">
                                 <a class="product-20-btn section-btn-20" href="{{ product.url }}">VIEW PRODUCT</a>
@@ -152,6 +153,7 @@
                                     <span class="comp-price-20"> {{product.compare_at_price |  money }} </span>
                                 </div>
                             </div>
+                            </a>
                         </div>
                     {% endfor %}
 
