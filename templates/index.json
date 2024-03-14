@@ -528,6 +528,12 @@
       ],
       "settings": {
       }
+    },
+    "sticky_collection_zG3Ce3": {
+      "type": "sticky-collection",
+      "settings": {
+        "collection": "face-masks"
+      }
     }
   },
   "order": [
@@ -546,6 +552,7 @@
     "custom_liquid_Bhf3Ab",
     "custom_liquid_zC4zn9",
     "image_and_title_NiJ7UB",
-    "simple_collection_4rDmeA"
+    "simple_collection_4rDmeA",
+    "sticky_collection_zG3Ce3"
   ]
 }
