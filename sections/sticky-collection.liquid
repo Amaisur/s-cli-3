@@ -197,7 +197,7 @@
                                 <a class="product-20-btn section-btn-20" href="{{ product.url }}">VIEW PRODUCT</a>
                             </div>
                             <div class="content-20-product">
-                                <h3> {{product.title}} </h3>
+                                <h3> {{product.title |  truncate: 40}} </h3>
                                 <div class="price-20">
                                     <span class="price-20"> {{product.price |  money }} </span>
                                     <span class="comp-price-20"> {{product.compare_at_price |  money }} </span>
