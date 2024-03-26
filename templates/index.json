@@ -535,6 +535,33 @@
       "settings": {
         "collection": "face-masks"
       }
+    },
+    "faq_icons_yGrJGR": {
+      "type": "faq-icons",
+      "blocks": {
+        "mini_faq_frJFJg": {
+          "type": "mini-faq",
+          "settings": {
+            "mini-head": "fff",
+            "mini-para": "ffgh"
+          }
+        },
+        "main_faq_mPVkM3": {
+          "type": "main-faq",
+          "settings": {
+            "quest": "ghjhjj",
+            "quest-ans": "vnvnvnb"
+          }
+        }
+      },
+      "block_order": [
+        "mini_faq_frJFJg",
+        "main_faq_mPVkM3"
+      ],
+      "settings": {
+        "faq-head": "NEED HELP?",
+        "faq-para": "We offer support via email."
+      }
     }
   },
   "order": [
@@ -554,6 +581,7 @@
     "custom_liquid_zC4zn9",
     "image_and_title_NiJ7UB",
     "simple_collection_4rDmeA",
-    "sticky_collection_zG3Ce3"
+    "sticky_collection_zG3Ce3",
+    "faq_icons_yGrJGR"
   ]
 }
