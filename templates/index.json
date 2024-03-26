@@ -535,6 +535,11 @@
       "settings": {
         "collection": "face-masks"
       }
+    },
+    "snippet_re_A3qC9M": {
+      "type": "snippet-re",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -554,6 +559,7 @@
     "custom_liquid_zC4zn9",
     "image_and_title_NiJ7UB",
     "simple_collection_4rDmeA",
-    "sticky_collection_zG3Ce3"
+    "sticky_collection_zG3Ce3",
+    "snippet_re_A3qC9M"
   ]
 }
