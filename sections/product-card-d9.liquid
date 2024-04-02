@@ -1,3 +1,24 @@
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .main-d9-31{
+            width: 100%;
+            margin: 20px 0;
+        }
+        .inner-d9-31{
+            width: 90%;
+            margin: 0 auto;
+            padding: 10px 20px;
+        }
+        .row-d9-31{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    </style>
+    
     {%  assign collection = section.settings.collection %}
     <div class="main-d9-31">
         <div class="inner-d9-31">
@@ -17,7 +38,7 @@
                     <div class="variant-31">
                        
                         <div class="variant-img-swatch-31">
-                        <img src="{{ variant.image |  img_url: '' }}" alt="">
+                        <img class="variant-img-31" src="{{ variant.image |  img_url: '' }}" alt="">
                         </div>
                     </div>
                 {% endfor %}
