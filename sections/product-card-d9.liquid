@@ -83,6 +83,12 @@
         color: black;
         font-weight: 800;
     }
+    .stock-quantiy-31{
+        margin: 10px 0 5px;
+    }
+    .stock-quantiy-31 ul li{
+        color: green;
+    }
     @media (max-width:1120px){
         .row-d9-31 {
         grid-template-columns: repeat(3, 1fr);
@@ -131,14 +137,15 @@
                             {% endif %}
 
                             {% endfor %}
-                        </div>
-                        <div class="stock-quantiy-31">
+                            <div class="stock-quantiy-31">
                         <ul>
                             <li>
                                 In Stock ({{ totalQuantity }} units)
                             </li>
                         </ul>
                     </div>
+                        </div>
+                        
                     </div>
                     
                 </div>
