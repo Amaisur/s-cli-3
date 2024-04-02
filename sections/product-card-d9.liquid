@@ -1,63 +1,72 @@
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        .main-d9-31{
-            width: 100%;
-            margin: 20px 0;
-        }
-        .inner-d9-31{
-            width: 90%;
-            margin: 0 auto;
-            padding: 10px 20px;
-        }
-        .row-d9-31{
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-        .col-d9-31{ 
-            width: 100%;
-        }
-        .product-img-31{
-            width: 100%;
-            height: 250px;
-            overflow: hidden;
-        }
-        .product-img-31 img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .variant-img-31{
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 1px solid black;
-        }
-        .variant-img-31.active-variant-31{
-            border: 4px solid black;
-        }
-        .variant-31{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-    </style>
-    
-    {%  assign collection = section.settings.collection %}
-    <div class="main-d9-31">
-        <div class="inner-d9-31">
-            <div class="row-d9-31">
-                 {% for product in collection.products %}
-                    
-                
-                <div class="col-d9-31">
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .main-d9-31 {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .inner-d9-31 {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px 20px;
+    }
+
+    .row-d9-31 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .col-d9-31 {
+        width: 100%;
+    }
+
+    .product-img-31 {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+    }
+
+    .product-img-31 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .variant-img-31 {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+
+    .variant-img-31.active-variant-31 {
+        border: 4px solid black;
+    }
+
+    .variant-31 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+</style>
+
+{% assign collection = section.settings.collection %}
+<div class="main-d9-31">
+    <div class="inner-d9-31">
+        <div class="row-d9-31">
+            {% for product in collection.products %}
+
+
+            <div class="col-d9-31">
                 <div class="product-img-31">
                     <img src="{{ product.featured_image |  img_url: '' }}" alt="">
                 </div>
@@ -65,20 +74,21 @@
                     <p class="collection-title-31"> {{ collection.title }} </p>
                     <h3> {{ product.title }} </h3>
                     <p> {{ product.price | money }} </p>
-                    
+
                     <div class="variant-31">
                         {% for variant in product.variants %}
                         {% comment %} <div class="variant-img-swatch-31"> {% endcomment %}
                             {% if variant.image %}
-                            <img class="variant-img-31 {% if forloop.first %}active-variant-31{% endif %}" src="{{ variant.image |  img_url: '' }}" alt="">
-                    {% endif %}
-                        
-                    {% endfor %}
+                            <img class="variant-img-31 {% if forloop.first %}active-variant-31{% endif %}"
+                                src="{{ variant.image |  img_url: '' }}" alt="">
+                            {% endif %}
+
+                            {% endfor %}
+                        </div>
+
                     </div>
-               
                 </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -86,22 +96,22 @@
 
 
 
-{% schema %}
-{
+    {% schema %}
+    {
     "name": "Product card",
     "settings": [
-        {
-            "type": "collection",
-            "id": "collection",
-            "label": "Select collection"
-        }
-        ],
+    {
+    "type": "collection",
+    "id": "collection",
+    "label": "Select collection"
+    }
+    ],
 
-        "presets": [
-            {
-                "name": "Product card"
-            }
-        ]
+    "presets": [
+    {
+    "name": "Product card"
+    }
+    ]
 
-}
-{% endschema %}
+    }
+    {% endschema %}
