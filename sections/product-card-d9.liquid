@@ -84,7 +84,7 @@
         font-weight: 800;
     }
     .stock-quantiy-31{
-        margin: 10px 0 5px;
+        margin: 5px 10px 5px 0;
     }
     .stock-quantiy-31 ul li{
         color: green;
@@ -137,15 +137,15 @@
                             {% endif %}
 
                             {% endfor %}
-                            <div class="stock-quantiy-31">
-                        <ul>
-                            <li>
-                                In Stock ({{ totalQuantity }} units)
-                            </li>
-                        </ul>
-                    </div>
+                          
                         </div>
-                        
+                        <div class="stock-quantiy-31">
+                            <ul>
+                                <li>
+                                    In Stock ({{ totalQuantity }} units)
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     
                 </div>
