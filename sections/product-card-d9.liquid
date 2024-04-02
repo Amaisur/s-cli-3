@@ -25,6 +25,7 @@
 
     .col-d9-31 {
         width: 100%;
+        padding-bottom: 15px;
     }
 
     .product-img-31 {
@@ -131,6 +132,13 @@
                             {% endfor %}
                         </div>
 
+                    </div>
+                    <div class="stock-quantiy-31">
+                        <ul>
+                            <li>
+                                In Stock ({{ product.quantity }} units)
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 {% endfor %}
