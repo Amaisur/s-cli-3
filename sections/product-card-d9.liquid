@@ -118,7 +118,8 @@
         clickedImage.classList.add('active-variant-31');
 
         // Get the source of the clicked image
-        const newFeaturedImageSrc = clickedImage.src;
+        const newFeaturedImageSrc = clickedImage.getAttribute('src');
+
         console.log(newFeaturedImageSrc)
 
         // Set the source of the main featured image
