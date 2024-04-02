@@ -65,6 +65,23 @@
         flex-wrap: wrap;
         gap: 20px;
     }
+    .product-link-31{
+        text-decoration: none;
+    }
+    .collection-title-31{
+        font-size: 14px;
+        color: #4c454556;
+    }
+    .product-link-31 h3{
+        font-size: 18px;
+        font-weight: 600;
+        color: black;
+    }
+    .product-link-31  .money-31{
+        font-size: 25px;
+        color: black;
+        font-weight: 800;
+    }
     @media (max-width:1120px){
         .row-d9-31 {
         grid-template-columns: repeat(3, 1fr);
@@ -90,14 +107,17 @@
 
 
             <div class="col-d9-31">
+                <a class="product-link-31" href="{{ product.url }}"></a>
                 <div class="product-img-31">
                     <img id="featured-image" src="{{ product.featured_image |  img_url: '' }}" alt="">
                 </div>
+                </a>
                 <div class="product-info-31">
+                    <a class="product-link-31" href="{{ product.url }}">
                     <p class="collection-title-31"> {{ collection.title }} </p>
                     <h3> {{ product.title }} </h3>
-                    <p> {{ product.price | money }} </p>
-
+                    <p class="money-31"> {{ product.price | money }} </p>
+                    </a>
                     <div class="variant-31">
                         {% for variant in product.variants %}
                         {% comment %} <div class="variant-img-swatch-31"> {% endcomment %}
