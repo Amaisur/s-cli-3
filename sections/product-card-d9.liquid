@@ -128,18 +128,18 @@
                                 src="{{ variant.image |  img_url: '' }}" alt="">
                                 </div>
                             {% endif %}
-                            <div class="stock-quantiy-31">
-                                <ul>
-                                    <li>
-                                        In Stock ({{ variant.inventory_quantity }} units)
-                                    </li>
-                                </ul>
-                            </div>
+
                             {% endfor %}
                         </div>
 
                     </div>
-                   
+                    <div class="stock-quantiy-31">
+                        <ul>
+                            <li>
+                                In Stock ({{ product.inventory_quantity }} units)
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 {% endfor %}
             </div>
