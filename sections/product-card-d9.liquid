@@ -67,11 +67,11 @@
                     
                     <div class="variant-31">
                         {% for variant in product.variants %}
-                        <div class="variant-img-swatch-31">
+                        {% comment %} <div class="variant-img-swatch-31"> {% endcomment %}
                             {% if variant.image %}
                             <img class="variant-img-31 {% if forloop.first %}active-variant-31{% endif %}" src="{{ variant.image |  img_url: '' }}" alt="">
                     {% endif %}
-                        </div>
+                        
                     {% endfor %}
                     </div>
                
