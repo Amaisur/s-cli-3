@@ -142,7 +142,7 @@
                         <div class="stock-quantiy-31">
                             <ul>
                                 <li>
-                                    In Stock ({{ totalQuantity }} units)
+                                    In Stock ( {% if totalQuantity > 0  %} {{ totalQuantity }}{% endif %} units)
                                 </li>
                             </ul>
                         </div>
