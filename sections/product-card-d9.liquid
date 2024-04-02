@@ -45,8 +45,15 @@
         border-radius: 50%;
         border: 1px solid black;
     }
-
-    .variant-img-31.active-variant-31 {
+    .variant-img-31-img{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid red;
+    }
+    .active-variant-31 {
         border: 4px solid black;
     }
 
@@ -79,8 +86,10 @@
                         {% for variant in product.variants %}
                         {% comment %} <div class="variant-img-swatch-31"> {% endcomment %}
                             {% if variant.image %}
-                            <img class="variant-img-31 {% if forloop.first %}active-variant-31{% endif %}"
-                                src="{{ variant.image |  img_url: '' }}" alt="" onclick="changeFeaturedImage(this)">
+                                <div class="variant-img-31-img {% if forloop.first %}active-variant-31{% endif %}">
+                            <img class="variant-img-31"
+                                src="{{ variant.image |  img_url: '' }}" alt="">
+                                </div>
                             {% endif %}
 
                             {% endfor %}
@@ -97,7 +106,7 @@
     
 <script>
     window.onload = function() {
-        const variantImages = document.querySelectorAll('.variant-img-31');
+        const variantImages = document.querySelectorAll('.variant-img-31-img');
         variantImages.forEach(function(image) {
             image.addEventListener('click', function() {
                 changeFeaturedImage(this);
@@ -112,7 +121,7 @@
     const featuredImages = parentCol.querySelectorAll('#featured-image');
 
     // Remove active class from all variant images within the same column
-    parentCol.querySelectorAll('.variant-img-31').forEach(function(image) {
+    parentCol.querySelectorAll('.variant-img-31-img').forEach(function(image) {
         image.classList.remove('active-variant-31');
     });
 
