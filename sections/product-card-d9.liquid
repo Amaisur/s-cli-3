@@ -110,9 +110,10 @@
             console.log(newFeaturedImageSrc);
     
             // Set the source of all featured images
-            const featuredImage = document.querySelector('.featured-image');
-        featuredImage.src = newFeaturedImageSrc;
-    
+            const featuredImages = document.querySelectorAll('.featured-image');
+            featuredImages.forEach(function(image) {
+                image.src = newFeaturedImageSrc;
+            });
         }
     </script>
 
