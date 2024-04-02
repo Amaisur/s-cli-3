@@ -538,7 +538,14 @@
     },
     "snippet_re_A3qC9M": {
       "type": "snippet-re",
+      "disabled": true,
       "settings": {
+      }
+    },
+    "product_card_d9_yeaFJC": {
+      "type": "product-card-d9",
+      "settings": {
+        "collection": "frontpage"
       }
     }
   },
@@ -560,6 +567,7 @@
     "image_and_title_NiJ7UB",
     "simple_collection_4rDmeA",
     "sticky_collection_zG3Ce3",
-    "snippet_re_A3qC9M"
+    "snippet_re_A3qC9M",
+    "product_card_d9_yeaFJC"
   ]
 }

@@ -1,0 +1,219 @@
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .main-d9-31 {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .inner-d9-31 {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px 20px;
+    }
+
+    .row-d9-31 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .col-d9-31 {
+        width: 100%;
+        padding-bottom: 15px;
+    }
+
+    .product-img-31 {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .product-img-31 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+    }
+    .product-img-31 img:hover{
+        transform: scale(1.1);
+    }
+    .variant-img-31 {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
+    .variant-img-31-img{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(232, 117, 173, 0.249);
+        cursor: pointer;
+    }
+    .active-variant-31 {
+        border: 2px solid black;
+    }
+
+    .variant-31 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .product-link-31{
+        text-decoration: none;
+    }
+    .collection-title-31{
+        font-size: 14px;
+        color: #5e3e3ea1;
+    }
+    .product-link-31 h3{
+        font-size: 20px;
+        font-weight: 500;
+        color: rgb(42, 42, 53);
+    }
+    .product-link-31  .money-31{
+        font-size: 25px;
+        color: black;
+        font-weight: 800;
+    }
+    .stock-quantiy-31{
+        margin: 5px 0 5px 16px;
+    }
+    .stock-quantiy-31 ul li{
+        color: green;
+    }
+    @media (max-width:1120px){
+        .row-d9-31 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    }
+    @media (max-width:768px){ 
+        .row-d9-31 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    }
+    @media (max-width:450px){ 
+        .row-d9-31 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    }
+</style>
+
+{% assign collection = section.settings.collection %}
+<div class="main-d9-31">
+    <div class="inner-d9-31">
+        <div class="row-d9-31">
+            {% for product in collection.products %}
+
+                {% assign totalQuantity = 0 %}
+            <div class="col-d9-31">
+                <a class="product-link-31" href="{{ product.url }}">
+                <div class="product-img-31">
+                    <img id="featured-image" src="{{ product.featured_image |  img_url: '' }}" alt="">
+                </div>
+                </a>
+                <div class="product-info-31">
+                    <a class="product-link-31" href="{{ product.url }}">
+                    <p class="collection-title-31"> {{ collection.title }} </p>
+                    <h3> {{ product.title }} </h3>
+                    <p class="money-31"> {{ product.price | money }} </p>
+                    </a>
+                    <div class="variant-31">
+                        {% for variant in product.variants %}
+                            {% assign totalQuantity = totalQuantity | plus: variant.inventory_quantity %}
+                        {% comment %} <div class="variant-img-swatch-31"> {% endcomment %}
+                            {% if variant.image %}
+                                <div class="variant-img-31-img">
+                            <img class="variant-img-31"
+                                src="{{ variant.image |  img_url: '' }}" alt="">
+                                </div>
+                            {% endif %}
+
+                            {% endfor %}
+                          
+                        </div>
+                        {% if totalQuantity > 0  %}
+                        <div class="stock-quantiy-31">
+                            <ul>
+                                <li>
+                                    In Stock ({{ totalQuantity }} units)
+                                </li>
+                            </ul>
+                        </div>
+                    {% endif %}
+                    </div>
+                    
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+    
+<script>
+    window.onload = function() {
+        const variantImages = document.querySelectorAll('.variant-img-31');
+        variantImages.forEach(function(image) {
+            image.addEventListener('click', function() {
+                changeFeaturedImage(this);
+            });
+        });
+    }
+
+    function changeFeaturedImage(clickedImage) {
+    const parentCol = clickedImage.closest('.col-d9-31');
+    
+    // Select all featured images within the same column
+    const featuredImages = parentCol.querySelectorAll('#featured-image');
+
+    // Remove active class from all variant images within the same column
+    parentCol.querySelectorAll('.variant-img-31').forEach(function(image) {
+        image.classList.remove('active-variant-31');
+    });
+
+    // Add active class to the clicked image
+    clickedImage.classList.add('active-variant-31');
+    // Get the source of the clicked image
+    const newFeaturedImageSrc = clickedImage.getAttribute('src');
+    console.log(newFeaturedImageSrc)
+
+    // Set the source of all featured images within the same column
+    featuredImages.forEach(function(featuredImage) {
+        featuredImage.setAttribute('src', newFeaturedImageSrc);
+        console.log(featuredImage)
+    });
+}
+
+</script>
+
+    {% schema %}
+    {
+    "name": "Product card",
+    "settings": [
+    {
+    "type": "collection",
+    "id": "collection",
+    "label": "Select collection"
+    }
+    ],
+
+    "presets": [
+    {
+    "name": "Product card"
+    }
+    ]
+
+    }
+    {% endschema %}
