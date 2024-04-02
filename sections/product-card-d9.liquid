@@ -139,13 +139,15 @@
                             {% endfor %}
                           
                         </div>
+                        {% if totalQuantity > 0  %}
                         <div class="stock-quantiy-31">
                             <ul>
                                 <li>
-                                    In Stock ( {% if totalQuantity > 0  %} {{ totalQuantity }}{% endif %} units)
+                                    In Stock (  {{ totalQuantity }} units)
                                 </li>
                             </ul>
                         </div>
+                    {% endif %}
                     </div>
                     
                 </div>
