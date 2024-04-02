@@ -94,28 +94,36 @@
     </div>
 
 
-    <script>
-        function changeFeaturedImage(clickedImage) {
-            // Remove active class from all variant images
-            const variantImages = document.querySelectorAll('.variant-img-31');
-            variantImages.forEach(function(image) {
-                image.classList.remove('active-variant-31');
+    
+<script>
+    window.onload = function() {
+        const variantImages = document.querySelectorAll('.variant-img-31');
+        variantImages.forEach(function(image) {
+            image.addEventListener('click', function() {
+                changeFeaturedImage(this);
             });
-    
-            // Add active class to the clicked image
-            clickedImage.classList.add('active-variant-31');
-    
-            // Get the source of the clicked image
-            const newFeaturedImageSrc = clickedImage.src;
-            console.log(newFeaturedImageSrc);
-    
-            // Set the source of all featured images
-            const featuredImages = document.querySelectorAll('.featured-image');
-            featuredImages.forEach(function(image) {
-                image.setAttribute('src', newFeaturedImageSrc);
-            });
-        }
-    </script>
+        });
+    }
+
+    function changeFeaturedImage(clickedImage) {
+        const parentCol = clickedImage.closest('.col-d9-31');
+        const featuredImage = parentCol.querySelector('.featured-image');
+
+        // Remove active class from all variant images within the same column
+        parentCol.querySelectorAll('.variant-img-31').forEach(function(image) {
+            image.classList.remove('active-variant-31');
+        });
+
+        // Add active class to the clicked image
+        clickedImage.classList.add('active-variant-31');
+
+        // Get the source of the clicked image
+        const newFeaturedImageSrc = clickedImage.src;
+
+        // Set the source of the main featured image
+        featuredImage.setAttribute('src', newFeaturedImageSrc);
+    }
+</script>
 
     {% schema %}
     {
