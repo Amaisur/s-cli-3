@@ -33,12 +33,12 @@
             object-fit: cover;
         }
         .variant-img-31{
-            border-radius: 50%;
-        }
-        .variant-img-swatch-31{
             width: 40px;
             height: 40px;
-            padding: 2px;
+            border-radius: 50%;
+        }
+        .variant-img-31.active-variant-31{
+            border: 2px solid black;
         }
     </style>
     
@@ -61,7 +61,7 @@
                     <div class="variant-31">
                         <div class="variant-img-swatch-31">
                             {% if variant.image %}
-                        <img class="variant-img-31" src="{{ variant.image |  img_url: '' }}" alt="">
+                            <img class="variant-img-31 {% if variant.first.id %}active-variant-31{% endif %}" src="{{ variant.image |  img_url: '' }}" alt="">
                     {% endif %}
                         </div>
                     
