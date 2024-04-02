@@ -119,10 +119,10 @@
 
         // Get the source of the clicked image
         const newFeaturedImageSrc = clickedImage.src;
+        console.log(newFeaturedImageSrc)
 
         // Set the source of the main featured image
-        featuredImage.src = newFeaturedImageSrc;
-    
+        featuredImage.setAttribute('src', newFeaturedImageSrc);
     }
 </script>
 
