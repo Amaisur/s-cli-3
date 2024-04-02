@@ -98,17 +98,21 @@
         function changeFeaturedImage(clickedImage) {
             // Remove active class from all variant images
             const variantImages = document.querySelectorAll('.variant-img-31');
-            variantImages.forEach(image => {
+            variantImages.forEach(function(image) {
                 image.classList.remove('active-variant-31');
             });
     
             // Add active class to the clicked image
             clickedImage.classList.add('active-variant-31');
     
-            // Get the source of the clicked image and set it as the featured image source
+            // Get the source of the clicked image
             const newFeaturedImageSrc = clickedImage.src;
-            const featuredImage = document.getElementById('featured-image');
-            featuredImage.src = newFeaturedImageSrc;
+    
+            // Set the source of all featured images
+            const featuredImages = document.querySelectorAll('.featured-image');
+            featuredImages.forEach(function(image) {
+                image.src = newFeaturedImageSrc;
+            });
         }
     </script>
 
