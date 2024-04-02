@@ -80,7 +80,7 @@
                         {% comment %} <div class="variant-img-swatch-31"> {% endcomment %}
                             {% if variant.image %}
                             <img class="variant-img-31 {% if forloop.first %}active-variant-31{% endif %}"
-                                src="{{ variant.image |  img_url: '' }}" alt="">
+                                src="{{ variant.image |  img_url: '' }}" alt="" onclick="changeFeaturedImage(this)">
                             {% endif %}
 
                             {% endfor %}
@@ -106,16 +106,28 @@
     }
 
     function changeFeaturedImage(clickedImage) {
+    const parentCol = clickedImage.closest('.col-d9-31');
+    
+    // Select all featured images within the same column
+    const featuredImages = parentCol.querySelectorAll('.featured-image');
+
+    // Remove active class from all variant images within the same column
+    parentCol.querySelectorAll('.variant-img-31').forEach(function(image) {
+        image.classList.remove('active-variant-31');
+    });
+
+    // Add active class to the clicked image
+    clickedImage.classList.add('active-variant-31');
+
+    // Get the source of the clicked image
     const newFeaturedImageSrc = clickedImage.getAttribute('src');
-    const featuredImage = document.getElementById('featured-image');
-    if (featuredImage) {
+
+    // Set the source of all featured images within the same column
+    featuredImages.forEach(function(featuredImage) {
         featuredImage.setAttribute('src', newFeaturedImageSrc);
-    } else {
-        console.error('Featured image element not found.');
-    }
+    });
 }
 
-    
 </script>
 
     {% schema %}
