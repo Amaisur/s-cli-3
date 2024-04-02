@@ -106,7 +106,7 @@
         <div class="row-d9-31">
             {% for product in collection.products %}
 
-
+                {% assign totalQuantity = 0 %}
             <div class="col-d9-31">
                 <a class="product-link-31" href="{{ product.url }}"></a>
                 <div class="product-img-31">
@@ -121,6 +121,7 @@
                     </a>
                     <div class="variant-31">
                         {% for variant in product.variants %}
+                            {% assign totalQuantity = totalQuantity | plus: variant.inventory_quantity %}
                         {% comment %} <div class="variant-img-swatch-31"> {% endcomment %}
                             {% if variant.image %}
                                 <div class="variant-img-31-img">
@@ -131,7 +132,13 @@
 
                             {% endfor %}
                         </div>
-
+                        <div class="stock-quantiy-31">
+                        <ul>
+                            <li>
+                                In Stock ({{ totalQuantity }} units)
+                            </li>
+                        </ul>
+                    </div>
                     </div>
                     
                 </div>
