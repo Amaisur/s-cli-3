@@ -125,7 +125,7 @@
 
     // Set the source of all featured images within the same column
     featuredImages.forEach(function(featuredImage) {
-        featuredImage.setAttribute('src', newFeaturedImageSrc);
+        featuredImage.setAttribute('src', newFeaturedImageSrc.getAttribute('src'))
         console.log(featuredImage)
     });
 }
