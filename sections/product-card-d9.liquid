@@ -127,9 +127,9 @@
 
     // Add active class to the clicked image
     clickedImage.classList.add('active-variant-31');
-
+    variantImage = document.querySelector('.active-variant-31 img')
     // Get the source of the clicked image
-    const newFeaturedImageSrc = clickedImage.getAttribute('src');
+    const newFeaturedImageSrc = variantImage.getAttribute('src');
     console.log(newFeaturedImageSrc)
 
     // Set the source of all featured images within the same column
