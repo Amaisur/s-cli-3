@@ -61,7 +61,7 @@
                     <div class="variant-31">
                         <div class="variant-img-swatch-31">
                             {% if variant.image %}
-                            <img class="variant-img-31 {% if variant.first.id %}active-variant-31{% endif %}" src="{{ variant.image |  img_url: '' }}" alt="">
+                            <img class="variant-img-31 {% if variant.first %}active-variant-31{% endif %}" src="{{ variant.image |  img_url: '' }}" alt="">
                     {% endif %}
                         </div>
                     
