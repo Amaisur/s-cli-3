@@ -56,11 +56,12 @@
                     <p> {{ product.price | money }} </p>
                     {% for variant in product.variants %}
                     <div class="variant-31">
-                       {% if variant.image == variant.image %}
                         <div class="variant-img-swatch-31">
+                            {% if variant.image %}
                         <img class="variant-img-31" src="{{ variant.image |  img_url: '' }}" alt="">
-                        </div>
                     {% endif %}
+                        </div>
+                    
                     </div>
                 {% endfor %}
                 </div>
