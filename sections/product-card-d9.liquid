@@ -1,0 +1,51 @@
+    {%  assign collection = section.settings.collection %}
+    <div class="main-d9-31">
+        <div class="inner-d9-31">
+            <div class="row-d9-31">
+                 {% for product in collection.products %}
+                    
+                
+                <div class="col-d9-31">
+                <div class="product-img-31">
+                    <img src="{{ product.featured_image |  img_url: '' }}" alt="">
+                </div>
+                <div class="product-info-31">
+                    <p class="collection-title-31"> {{ collection.title }} </p>
+                    <h3> {{ product.title }} </h3>
+                    {% for variant in product.variants %}
+                    <div class="variant-31">
+                        <p> {{ variant.price | money }} </p>
+                        <div class="variant-img-swatch-31">
+                        <img src="{{ variant.image |  img_url: '' }}" alt="">
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% schema %}
+{
+    "name": "Product card",
+    "settings": [
+        {
+            "type": "collection",
+            "id": "collection",
+            "label": "Select collection"
+        }
+        ],
+
+        "presets": [
+            {
+                "name": "Product card"
+            }
+        ]
+
+}
+{% endschema %}
