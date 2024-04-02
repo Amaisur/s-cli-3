@@ -80,7 +80,7 @@
                         {% comment %} <div class="variant-img-swatch-31"> {% endcomment %}
                             {% if variant.image %}
                             <img class="variant-img-31 {% if forloop.first %}active-variant-31{% endif %}"
-                                src="{{ variant.image |  img_url: '' }}" alt="">
+                                src="{{ variant.image |  img_url: '' }}" alt="" onclick="changeFeaturedImage(this)">
                             {% endif %}
 
                             {% endfor %}
@@ -94,7 +94,23 @@
     </div>
 
 
-
+    <script>
+        function changeFeaturedImage(clickedImage) {
+            // Remove active class from all variant images
+            const variantImages = document.querySelectorAll('.variant-img-31');
+            variantImages.forEach(image => {
+                image.classList.remove('active-variant-31');
+            });
+    
+            // Add active class to the clicked image
+            clickedImage.classList.add('active-variant-31');
+    
+            // Get the source of the clicked image and set it as the featured image source
+            const newFeaturedImageSrc = clickedImage.src;
+            const featuredImage = document.getElementById('featured-image');
+            featuredImage.src = newFeaturedImageSrc;
+        }
+    </script>
 
     {% schema %}
     {
