@@ -56,6 +56,13 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "app_1_star_rating_9DPcKG": {
+          "type": "shopify:\/\/apps\/app-1\/blocks\/star_rating\/3d1cf1e3-df53-49dd-a722-28a6771e2bec",
+          "settings": {
+            "product": "{{product}}",
+            "colour": "#ff0000"
+          }
         }
       },
       "block_order": [
@@ -66,7 +73,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "app_1_star_rating_9DPcKG"
       ],
       "settings": {
         "enable_sticky_info": true,
