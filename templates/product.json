@@ -61,7 +61,7 @@
           "type": "shopify:\/\/apps\/app-1\/blocks\/star_rating\/3d1cf1e3-df53-49dd-a722-28a6771e2bec",
           "settings": {
             "product": "{{product}}",
-            "colour": "#ff0000"
+            "colour": "#000000"
           }
         }
       },
