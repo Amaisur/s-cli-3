@@ -159,7 +159,7 @@
           </h3>
           <div class="card-information">
             <h1 style="display: block;">hello</h1>
-            <span style="display:block;"> {% render 'wishlisthero-collection-product' with product: product %}</span>
+            <span style="display:block; border: 2px solid red;"> {% render 'wishlisthero-collection-product' with product: product %}</span>
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
