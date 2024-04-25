@@ -103,6 +103,7 @@
             </div>
           </div>
         {%- endif -%}
+          <span style="display:block; border: 2px solid red;"> {% render 'wishlisthero-collection-product' with product: card_product %}</span>
         <div class="card__content">
           <div class="card__information">
             <h3
@@ -148,7 +149,7 @@
               id="title-{{ section_id }}-{{ card_product.id }}"
             {% endif %}
           >
-              <span style="display:block; border: 2px solid red;"> {% render 'wishlisthero-collection-product' with product: card_product %}</span>
+            
             <a
               href="{{ card_product.url }}"
               id="CardLink-{{ section_id }}-{{ card_product.id }}"
