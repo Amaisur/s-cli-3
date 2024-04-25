@@ -362,6 +362,8 @@
       </div>
       <div class="card__content">
         <div class="card__information">
+          {% render 'wishlisthero-collection-product' with product: product %}
+          <p>hello</p>
           <h3 class="card__heading card__heading--placeholder{% if settings.card_style == 'standard' %} h5{% endif %}">
             <a role="link" aria-disabled="true" class="full-unstyled-link">
               {{ 'onboarding.product_title' | t }}
