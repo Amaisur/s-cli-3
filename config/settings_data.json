@@ -145,7 +145,7 @@
       },
       "3066834073402364550": {
         "type": "shopify:\/\/apps\/sellup-upsell-add-ons\/blocks\/global_sellup\/001ec440-29ea-4cbf-9265-4963fa825261",
-        "disabled": false,
+        "disabled": true,
         "settings": {
         }
       }
