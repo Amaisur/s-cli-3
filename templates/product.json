@@ -60,6 +60,11 @@
             "addedContainerStyles": ""
           }
         },
+        "sellup_upsell_add_ons_onpage_offers_Y9EnKA": {
+          "type": "shopify:\/\/apps\/sellup-upsell-add-ons\/blocks\/onpage_offers\/001ec440-29ea-4cbf-9265-4963fa825261",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -87,6 +92,7 @@
         "quantity_selector",
         "buy_buttons",
         "wishlist_hero_custom_product_button_bK38Bt",
+        "sellup_upsell_add_ons_onpage_offers_Y9EnKA",
         "description",
         "share",
         "app_1_star_rating_9DPcKG"
