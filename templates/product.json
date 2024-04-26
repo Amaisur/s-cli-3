@@ -65,6 +65,11 @@
           "settings": {
           }
         },
+        "sellup_upsell_add_ons_checkbox_onpage_offers_jV7y9K": {
+          "type": "shopify:\/\/apps\/sellup-upsell-add-ons\/blocks\/checkbox_onpage_offers\/001ec440-29ea-4cbf-9265-4963fa825261",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -93,6 +98,7 @@
         "buy_buttons",
         "wishlist_hero_custom_product_button_bK38Bt",
         "sellup_upsell_add_ons_onpage_offers_Y9EnKA",
+        "sellup_upsell_add_ons_checkbox_onpage_offers_jV7y9K",
         "description",
         "share",
         "app_1_star_rating_9DPcKG"
