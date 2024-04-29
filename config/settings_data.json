@@ -135,30 +135,32 @@
 
     ],
     "blocks": {
-      "7870687481494312845": {
-        "type": "shopify:\/\/apps\/wishlist-hero\/blocks\/app-embed\/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
-        "disabled": false,
-        "settings": {
-          "additionalWLButtonCssClasses": "",
-          "additionalWLCartBubbleCssClasses": ""
-        }
-      },
       "3066834073402364550": {
         "type": "shopify:\/\/apps\/sellup-upsell-add-ons\/blocks\/global_sellup\/001ec440-29ea-4cbf-9265-4963fa825261",
         "disabled": true,
         "settings": {
         }
       },
-      "10553572162545005813": {
-        "type": "shopify:\/\/apps\/upsell-app-by-essentialwolf\/blocks\/app-embed\/ae950cb1-1eb5-4b22-b308-ab5141c9f88c",
-        "disabled": false,
+      "17622862728305079995": {
+        "type": "shopify:\/\/apps\/honeycomb-upsell-cross-sell\/blocks\/widget\/5f6478b0-766a-4d99-99d3-883f1a9787b0",
+        "disabled": true,
         "settings": {
         }
       },
-      "17622862728305079995": {
-        "type": "shopify:\/\/apps\/honeycomb-upsell-cross-sell\/blocks\/widget\/5f6478b0-766a-4d99-99d3-883f1a9787b0",
-        "disabled": false,
+      "10553572162545005813": {
+        "type": "shopify:\/\/apps\/upsell-app-by-essentialwolf\/blocks\/app-embed\/ae950cb1-1eb5-4b22-b308-ab5141c9f88c",
+        "disabled": true,
         "settings": {
+        }
+      },
+      "7870687481494312845": {
+        "type": "shopify:\/\/apps\/wishlist-hero\/blocks\/app-embed\/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
+        "disabled": true,
+        "settings": {
+          "customThemeName": "~",
+          "additionalWLButtonCssClasses": "",
+          "additionalWLCartBubbleCssClasses": "",
+          "extraHTMLToAppend": ""
         }
       }
     },
