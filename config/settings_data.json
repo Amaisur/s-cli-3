@@ -148,6 +148,12 @@
         "disabled": true,
         "settings": {
         }
+      },
+      "10553572162545005813": {
+        "type": "shopify:\/\/apps\/upsell-app-by-essentialwolf\/blocks\/app-embed\/ae950cb1-1eb5-4b22-b308-ab5141c9f88c",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {

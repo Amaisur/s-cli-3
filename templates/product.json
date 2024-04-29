@@ -87,6 +87,11 @@
             "product": "{{product}}",
             "colour": "#000000"
           }
+        },
+        "upsell_app_by_essentialwolf_app_block_KihFN3": {
+          "type": "shopify:\/\/apps\/upsell-app-by-essentialwolf\/blocks\/app-block\/ae950cb1-1eb5-4b22-b308-ab5141c9f88c",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -101,7 +106,8 @@
         "sellup_upsell_add_ons_checkbox_onpage_offers_jV7y9K",
         "description",
         "share",
-        "app_1_star_rating_9DPcKG"
+        "app_1_star_rating_9DPcKG",
+        "upsell_app_by_essentialwolf_app_block_KihFN3"
       ],
       "settings": {
         "enable_sticky_info": true,
