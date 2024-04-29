@@ -154,6 +154,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "17622862728305079995": {
+        "type": "shopify:\/\/apps\/honeycomb-upsell-cross-sell\/blocks\/widget\/5f6478b0-766a-4d99-99d3-883f1a9787b0",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
