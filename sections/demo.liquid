@@ -1,5 +1,6 @@
 
   <h1>{{ section.settings.text-1 }}</h1>
+  <img src="{{ section.settings.img-1 | img_url:"master" }}" width="200" height="200">
 
 
 {% schema %}
@@ -10,7 +11,13 @@
         "type": "text",
         "id": "text-1",
         "label": "Your Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "img-1",
+        "label": "Upload your image"
       }
+      
     ],
     "presets": [
       {
