@@ -550,8 +550,10 @@
     },
     "demo_QAqP8x": {
       "type": "demo",
+      "disabled": true,
       "settings": {
-        "text-1": "Hello World"
+        "text-1": "Hello World",
+        "img-1": "shopify:\/\/shop_images\/featured-tab-collection-img.webp"
       }
     }
   },
