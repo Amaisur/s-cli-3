@@ -1,11 +1,17 @@
 
-  <h1>HEllo</h1>
+  <h1>{{ section.settings.text-1 }}</h1>
 
 
 {% schema %}
   {
     "name": "Demo",
-    "settings": [],
+    "settings": [
+      {
+        "type": "text",
+        "id": "text-1",
+        "label": "Your Text"
+      }
+    ],
     "presets": [
       {
         "name": "Demo"

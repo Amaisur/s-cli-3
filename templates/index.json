@@ -547,6 +547,11 @@
       "settings": {
         "collection": "frontpage"
       }
+    },
+    "demo_QAqP8x": {
+      "type": "demo",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -568,6 +573,7 @@
     "simple_collection_4rDmeA",
     "sticky_collection_zG3Ce3",
     "snippet_re_A3qC9M",
-    "product_card_d9_yeaFJC"
+    "product_card_d9_yeaFJC",
+    "demo_QAqP8x"
   ]
 }
