@@ -551,6 +551,7 @@
     "demo_QAqP8x": {
       "type": "demo",
       "settings": {
+        "text-1": "Hello World"
       }
     }
   },
