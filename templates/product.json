@@ -1,8 +1,16 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "new_product_info_4xjwRx": {
       "type": "new-product-info",
-      "disabled": true,
       "settings": {
         "lazy-load-10": true
       }
@@ -115,6 +123,7 @@
         "upsell_app_by_essentialwolf_app_block_KihFN3",
         "sellup_upsell_add_ons_onpage_offers_Kn6tmN"
       ],
+      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
