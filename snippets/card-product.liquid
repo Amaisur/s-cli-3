@@ -103,7 +103,7 @@
             </div>
           </div>
         {%- endif -%}
-          <span style="display:block; border: 2px solid red;"> {% render 'wishlisthero-collection-product' with product: card_product %}</span>
+          <span style="display:block; border: 2px solid red;"> {% render 'wishlisthero-collection-product' with product, product: card_product %}</span>
         <div class="card__content">
           <div class="card__information">
             <h3
@@ -383,3 +383,14 @@
     </div>
   </div>
 {%- endif -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'wishlisthero-collection-product' with product: card_product %}"
+  to: "{% render 'wishlisthero-collection-product' with product, product: card_product
+    %}"
+  position: 6949..7031
+{% endcomment %}
